@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interativa</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #mudarTexto {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .cor1 {
+            background-color: #FFD700;
+        }
+
+        .cor2 {
+            background-color: #FF69B4;
+        }
+
+        .cor3 {
+            background-color: #87CEEB;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <p id="mensagem">Esse é o texto inicial.</p>
+    <button id="mudarTexto" onclick="mudarTexto()">Mudar Texto ✏</button>
+
+    <div>
+        <h3>Mude a cor do fundo:</h3>
+        <button class="cor1" onclick="mudarCor('#FFD700')">Amarelo 🌞</button>
+        <button class="cor2" onclick="mudarCor('#FF69B4')">Rosa 💖</button>
+        <button class="cor3" onclick="mudarCor('#87CEEB')">Azul ☁</button>
+    </div>
+
+    <script>
+        function mudarTexto() {
+            document.getElementById("mensagem").innerHTML = "Texto alterado com sucesso! ✅";
+        }
+
+        function mudarCor(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+
+        function saudacao() {
+            alert("Olá! Seja muito bem-vindo(a) à minha página! 🎉");
+
+        }
+    </script>
+      <button onclick="saudacao()">Clique aqui</button>
+
+
+</body>
+</html>
